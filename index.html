@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environmental Minerals Inc. | Natural Pozzolan — Eastern California</title>
+<meta name="description" content="Environmental Minerals Inc. supplies premium ASTM C618 Class N natural pozzolan for concrete, construction, industrial, and agricultural markets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:       #1d6b63;
+  --teal-dark:  #134d48;
+  --teal-light: #2a8c82;
+  --teal-pale:  #e8f4f3;
+  --gold:       #c8870a;
+  --gold-light: #e8a01a;
+  --gold-pale:  #fdf3e0;
+  --slate:      #1e2a28;
+  --charcoal:   #2e3d3a;
+  --mid:        #556660;
+  --muted:      #8fa09c;
+  --border:     #d4e0de;
+  --bg:         #f7faf9;
+  --white:      #ffffff;
+  --text:       #1e2a28;
+  --cond:  'Barlow Condensed', sans-serif;
+  --body:  'Barlow', sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--white); color: var(--text); overflow-x: hidden; line-height: 1.6; }
+
+/* ── TOP BAR ── */
+.topbar {
+  background: var(--slate);
+  padding: 0.4rem 0;
+  font-family: var(--cond);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.7);
+}
+.topbar .container { display: flex; justify-content: space-between; align-items: center; }
+.topbar a { color: rgba(255,255,255,0.7); text-decoration: none; margin-left: 1.5rem; transition: color .2s; }
+.topbar a:hover { color: var(--gold-light); }
+.topbar-left { display: flex; gap: 1.5rem; }
+.topbar-item { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ── NAVIGATION ── */
+nav {
+  background: var(--white);
+  border-bottom: 3px solid var(--teal);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer; }
+.nav-logo-img { height: 44px; width: auto; }
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+.nav-logo-text .l1 { font-family: var(--cond); font-size: 1.1rem; font-weight: 700; color: var(--teal-dark); letter-spacing: 0.04em; text-transform: uppercase; }
+.nav-logo-text .l2 { font-family: var(--body); font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em; }
+.nav-menu { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-menu li { position: relative; }
+.nav-menu a {
+  display: block; padding: 0 1.1rem; height: 76px; line-height: 76px;
+  font-family: var(--cond); font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal);
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  border-bottom: 3px solid transparent; margin-bottom: -3px;
+  transition: color .2s, border-color .2s;
+}
+.nav-menu a:hover, .nav-menu a.active { color: var(--teal); border-bottom-color: var(--teal); }
+.nav-menu .has-drop:hover .drop { opacity:1; pointer-events:all; transform:translateY(0); }
+.drop {
+  position: absolute; top: 100%; left: 0;
+  background: var(--white); border-top: 3px solid var(--teal);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12); min-width: 220px;
+  padding: 0.5rem 0; opacity: 0; pointer-events: none;
+  transform: translateY(6px); transition: all 0.2s ease; z-index: 200;
+}
+.drop a { height: auto; line-height: 1; padding: 0.7rem 1.2rem; font-size: 0.78rem; border-bottom: none; margin: 0; color: var(--charcoal); }
+.drop a:hover { background: var(--teal-pale); color: var(--teal); }
+.nav-cta {
+  background: var(--teal); color: var(--white) !important;
+  padding: 0 1.4rem !important; border-radius: 2px;
+  border-bottom: none !important; margin-bottom: 0 !important;
+  transition: background .2s !important;
+}
+.nav-cta:hover { background: var(--teal-dark) !important; color: var(--white) !important; }
+
+/* ── CONTAINER ── */
+.container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── PAGES ── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ══════════════════════════════ HOME ══════════════════════════ */
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  display: flex; flex-direction: column;
+}
+/* Mining landscape backdrop — wraps bg + headline content */
+.hero-backdrop {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      rgba(10,22,18,0.35) 0%,
+      rgba(10,22,18,0.20) 40%,
+      rgba(10,22,18,0.65) 80%,
+      rgba(10,22,18,0.96) 100%),
+    url('hero.jpg') center/cover no-repeat;
+}
+.hero-bg { display: none; }
+.hero-terrain {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 55%; pointer-events: none;
+}
+.hero-texture {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, transparent 30%, black 70%);
+}
+.hero-haze {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+  background: linear-gradient(to top, rgba(180,160,120,0.06), transparent);
+}
+.hero-inner {
+  position: relative; z-index: 3;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+.hero-eyebrow {
+  font-family: var(--cond); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold-light); margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
+}
+.hero h1 {
+  font-family: var(--cond); font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 800; line-height: 1.0; color: var(--white);
+  text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 1rem;
+}
+.hero h1 em { color: var(--gold-light); font-style: normal; }
+.hero-tagline {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem); color: rgba(255,255,255,0.7);
+  max-width: 580px; line-height: 1.6; font-weight: 300;
+}
+
+/* ── INDUSTRY SELECTOR PANELS ── */
+.hero-panels {
+  display: grid; grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.hero-panel {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  padding: 1.8rem 3rem; gap: 2rem; cursor: pointer;
+  min-height: 160px;
+  transition: filter .25s;
+}
+.hero-panel:hover { filter: brightness(1.1); }
+.hero-panel:hover .panel-arrow { transform: translateX(6px); }
+.hero-panel.panel-concrete {
+  background:
+    linear-gradient(135deg, rgba(19,77,72,0.82) 0%, rgba(29,107,99,0.80) 100%),
+    url('concrete.jpg') center/cover no-repeat;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.hero-panel.panel-agri {
+  background:
+    linear-gradient(135deg, rgba(30,70,20,0.75) 0%, rgba(40,90,25,0.72) 100%),
+    url('agri-panel.jpg') center/cover no-repeat;
+}
+/* Subtle diagonal texture on panels */
+.hero-panel::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg, transparent, transparent 20px,
+    rgba(255,255,255,0.018) 20px, rgba(255,255,255,0.018) 21px
+  );
+  pointer-events: none;
+}
+.panel-icon {
+  font-size: 2.8rem; flex-shrink: 0; opacity: 0.9;
+  transition: transform .25s;
+}
+.hero-panel:hover .panel-icon { transform: scale(1.08); }
+.panel-text { flex: 1; }
+.panel-tag {
+  font-family: var(--cond); font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold-light); margin-bottom: 0.3rem;
+}
+.panel-title {
+  font-family: var(--cond); font-size: clamp(1.3rem, 2vw, 1.75rem);
+  font-weight: 800; color: var(--white); text-transform: uppercase;
+  line-height: 1.05; margin-bottom: 0.4rem; letter-spacing: 0.02em;
+}
+.panel-desc {
+  font-size: 0.8rem; color: rgba(255,255,255,0.68); line-height: 1.4;
+}
+.panel-arrow {
+  font-family: var(--cond); font-size: 1.5rem; color: var(--gold-light);
+  flex-shrink: 0; transition: transform .25s; font-weight: 800;
+}
+.panel-divider {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5; pointer-events: none;
+  width: 2px; height: 60%; background: rgba(255,255,255,0.12);
+}
+
+@media (max-width: 640px) {
+  .hero-inner { padding: 3.5rem 1.2rem 2.5rem; }
+  .hero-backdrop { min-height: 300px; }
+  .hero-panels { grid-template-columns: 1fr; }
+  .hero-panel { min-height: 110px; padding: 1.2rem 1.5rem; gap: 1rem; }
+  .panel-icon { font-size: 2rem; }
+  .panel-title { font-size: 1.2rem; }
+  .panel-desc { display: none; }
+}
+.btn { display: inline-block; font-family: var(--cond); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.8rem 2rem; cursor: pointer; border: none; text-decoration: none; transition: all .22s; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); }
+.btn-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.7); }
+.btn-white:hover { background: rgba(255,255,255,0.12); }
+.btn-gold { background: var(--gold); color: var(--white); }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline-teal { background: transparent; color: var(--teal); border: 2px solid var(--teal); }
+.btn-outline-teal:hover { background: var(--teal); color: var(--white); }
+
+/* ── ANNOUNCEMENT BAR ── */
+.announce {
+  background: var(--gold); padding: 0.7rem 0;
+  display: flex; align-items: center; justify-content: center; gap: 2rem;
+}
+.announce-text { font-family: var(--cond); font-size: 0.88rem; font-weight: 600; color: var(--white); letter-spacing: 0.06em; }
+.announce-link { font-family: var(--cond); font-size: 0.78rem; font-weight: 700; color: var(--white); text-decoration: none; border: 1px solid rgba(255,255,255,0.7); padding: 0.2rem 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all .2s; cursor: pointer; }
+.announce-link:hover { background: rgba(255,255,255,0.2); }
+
+/* ── SECTION HEADERS ── */
+.sec-head { text-align: center; margin-bottom: 2.5rem; }
+.sec-label { font-family: var(--cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.8rem; }
+.sec-label::before, .sec-label::after { content: ''; display: block; width: 24px; height: 2px; background: var(--teal); }
+.sec-title { font-family: var(--cond); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--slate); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.1; margin-bottom: 0.8rem; }
+.sec-sub { font-size: 0.95rem; color: var(--mid); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+/* ── PRODUCT GRID (TRP style dark tiles) ── */
+.products-home { background: var(--bg); padding: 4.5rem 0; }
+.products-intro { text-align: center; margin-bottom: 3rem; }
+
+.product-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.product-tile {
+  position: relative; padding: 2.5rem 2rem; cursor: pointer;
+  overflow: hidden; transition: transform .25s;
+}
+.product-tile:hover { transform: translateY(-4px); z-index: 2; }
+.product-tile.teal-dark { background: var(--teal-dark); }
+.product-tile.teal-mid  { background: var(--teal); }
+.product-tile.teal-gold { background: var(--charcoal); }
+.product-tile .tile-icon { font-size: 2.2rem; margin-bottom: 1rem; opacity: 0.9; }
+.product-tile .tile-tag { font-family: var(--cond); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.5rem; }
+.product-tile h3 { font-family: var(--cond); font-size: 1.5rem; font-weight: 800; color: var(--white); text-transform: uppercase; margin-bottom: 0.8rem; line-height: 1.1; }
+.product-tile p { font-size: 0.83rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 1.4rem; }
+.product-tile .tile-price { font-family: var(--cond); font-size: 1.1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1.2rem; }
+.tile-features { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1.5rem; }
+.tile-features li { font-size: 0.78rem; color: rgba(255,255,255,0.7); padding-left: 1rem; position: relative; }
+.tile-features li::before { content: '▸'; position: absolute; left: 0; color: var(--gold-light); font-size: 0.65rem; top: 0.1em; }
+.tile-btn { display: inline-block; font-family: var(--cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.55rem 1.2rem; background: transparent; border: 1px solid rgba(255,255,255,0.4); color: var(--white); cursor: pointer; transition: all .2s; }
+.tile-btn:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.7); }
+
+/* ── COMPLIANCE STRIP ── */
+.compliance-strip { background: var(--slate); padding: 1.5rem 0; }
+.compliance-strip .container { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.comp-badge { font-family: var(--cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.5rem; }
+.comp-badge::before { content: '✓'; color: var(--gold-light); font-size: 0.85rem; }
+.comp-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+
+/* ── KEY STATS ── */
+.stats-band { background: var(--teal); padding: 3rem 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.stat-item { text-align: center; padding: 1.5rem; border-right: 1px solid rgba(255,255,255,0.15); }
+.stat-item:last-child { border-right: none; }
+.stat-val { font-family: var(--cond); font-size: 3rem; font-weight: 800; color: var(--white); line-height: 1; margin-bottom: 0.3rem; }
+.stat-label { font-family: var(--cond); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); line-height: 1.3; }
+
+/* ── WHY EMI 3-col ── */
+.why-home { background: var(--white); padding: 4.5rem 0; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 0; }
+.why-card { background: var(--bg); border-top: 4px solid var(--teal); padding: 2rem; transition: box-shadow .2s; }
+.why-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+.why-card-num { font-family: var(--cond); font-size: 2.5rem; font-weight: 800; color: var(--teal); opacity: 0.2; line-height: 1; margin-bottom: 0.8rem; }
+.why-card h4 { font-family: var(--cond); font-size: 1.05rem; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.7rem; }
+.why-card p { font-size: 0.85rem; color: var(--mid); line-height: 1.7; }
+
+/* ── MARKET CALLOUT BAND ── */
+.market-band { background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0; }
+.market-band .container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+.market-quote-block { border-left: 4px solid var(--teal); padding-left: 2rem; }
+.market-quote-block blockquote { font-family: var(--serif); font-size: 1.3rem; color: var(--slate); line-height: 1.55; font-style: italic; margin-bottom: 1rem; }
+.market-quote-block cite { font-family: var(--cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.market-rows { display: flex; flex-direction: column; gap: 0; }
+.market-row { display: flex; align-items: center; gap: 1.5rem; padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+.market-row:last-child { border-bottom: none; }
+.market-num { font-family: var(--cond); font-size: 2.2rem; font-weight: 800; color: var(--teal); min-width: 90px; line-height: 1; }
+.market-desc strong { display: block; font-family: var(--cond); font-size: 0.85rem; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+.market-desc span { font-size: 0.82rem; color: var(--mid); line-height: 1.5; }
+
+/* ── FLY ASH COMPARISON ── */
+.compare-band { background: var(--slate); padding: 4rem 0; }
+.compare-band .sec-title { color: var(--white); }
+.compare-band .sec-label { color: var(--gold-light); }
+.compare-band .sec-label::before, .compare-band .sec-label::after { background: var(--gold-light); }
+.compare-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 2.5rem; background: rgba(255,255,255,0.06); }
+.compare-col-header { padding: 1rem 1.5rem; font-family: var(--cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+.compare-col-header.emi { background: var(--teal); color: var(--white); }
+.compare-col-header.fly { background: #3a3a3a; color: rgba(255,255,255,0.6); }
+.compare-row { display: contents; }
+.compare-cell { padding: 0.7rem 1.5rem; font-size: 0.82rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.compare-cell.emi-cell { background: rgba(29,107,99,0.15); color: rgba(255,255,255,0.9); }
+.compare-cell.fly-cell { background: rgba(255,255,255,0.03); color: rgba(255,255,255,0.5); }
+.compare-cell .good { color: #7dd87a; font-weight: 600; }
+.compare-cell .bad  { color: #e07a7a; }
+
+/* ── CTA BAND ── */
+.cta-band { background: var(--teal); padding: 3.5rem 0; text-align: center; }
+.cta-band h2 { font-family: var(--cond); font-size: 2rem; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.6rem; }
+.cta-band p { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 1.8rem; }
+.cta-band .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ══════════════════════════════ INNER PAGES ══════════════════════════ */
+.inner-hero {
+  background: linear-gradient(rgba(19,77,72,0.88), rgba(19,77,72,0.92)),
+    linear-gradient(135deg, #1d4a42 0%, #0f2d28 100%);
+  padding: 3.5rem 0 3rem; border-bottom: 4px solid var(--gold);
+}
+.inner-breadcrumb { font-family: var(--cond); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.8rem; display: flex; gap: 0.5rem; align-items: center; }
+.inner-breadcrumb span { color: var(--gold-light); }
+.inner-hero h1 { font-family: var(--cond); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.1; }
+.inner-hero h1 em { color: var(--gold-light); font-style: normal; }
+
+/* ── CONTENT SECTIONS ── */
+.content-sec { padding: 4rem 0; }
+.content-sec.alt { background: var(--bg); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.prose h2 { font-family: var(--cond); font-size: 1.6rem; font-weight: 800; color: var(--slate); text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 1rem; }
+.prose h3 { font-family: var(--cond); font-size: 1.1rem; font-weight: 700; color: var(--teal-dark); text-transform: uppercase; letter-spacing: 0.05em; margin: 1.8rem 0 0.6rem; border-left: 3px solid var(--teal); padding-left: 0.8rem; }
+.prose p { font-size: 0.9rem; color: var(--mid); line-height: 1.8; margin-bottom: 1rem; }
+.prose ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin: 0.8rem 0 1.4rem; }
+.prose li { font-size: 0.87rem; color: var(--mid); padding-left: 1.2rem; position: relative; line-height: 1.5; }
+.prose li::before { content: '▸'; position: absolute; left: 0; color: var(--teal); font-size: 0.7rem; top: 0.1em; }
+
+/* ── DATA TABLES ── */
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+.data-table th { background: var(--teal); color: var(--white); font-family: var(--cond); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.65rem 1rem; text-align: left; }
+.data-table td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); color: var(--charcoal); }
+.data-table tr:hover td { background: var(--teal-pale); }
+.data-table .good { color: #1b7a4a; font-weight: 600; }
+.data-table .hi { color: var(--teal); font-weight: 600; }
+.data-table .warn { color: #c0392b; }
+.pass-badge { display: inline-block; background: #e8f5e9; color: #1b7a4a; font-family: var(--cond); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.5rem; border: 1px solid #a5d6a7; }
+
+/* ── APP CARDS ── */
+.app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.app-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--teal); padding: 1.8rem; transition: box-shadow .2s, transform .2s; }
+.app-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-3px); }
+.app-icon { width: 44px; height: 44px; background: var(--teal-pale); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.app-icon svg { width: 22px; height: 22px; color: var(--teal); stroke: currentColor; fill: none; stroke-width: 1.8; }
+.app-card h4 { font-family: var(--cond); font-size: 0.95rem; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+.app-card p { font-size: 0.82rem; color: var(--mid); line-height: 1.65; }
+
+/* ── YIELD STATS (agri) ── */
+.yield-bar { background: var(--teal-dark); padding: 2.5rem 0; }
+.yield-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.yield-item { text-align: center; padding: 1.2rem; border-right: 1px solid rgba(255,255,255,0.12); }
+.yield-item:last-child { border-right: none; }
+.yield-val { font-family: var(--cond); font-size: 2.6rem; font-weight: 800; color: #7dd87a; line-height: 1; margin-bottom: 0.3rem; }
+.yield-lbl { font-family: var(--cond); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); line-height: 1.35; }
+
+/* ── CONTACT ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
+.contact-info-block h3 { font-family: var(--cond); font-size: 1.4rem; font-weight: 800; color: var(--slate); text-transform: uppercase; margin-bottom: 0.8rem; }
+.contact-info-block p { font-size: 0.88rem; color: var(--mid); line-height: 1.7; margin-bottom: 1.8rem; }
+.c-detail { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+.c-item { display: flex; gap: 1rem; align-items: flex-start; }
+.c-icon { width: 38px; height: 38px; background: var(--teal-pale); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.c-icon svg { width: 16px; height: 16px; color: var(--teal); stroke: currentColor; fill: none; stroke-width: 1.8; }
+.c-text strong { display: block; font-family: var(--cond); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+.c-text a, .c-text span { font-size: 0.88rem; color: var(--charcoal); text-decoration: none; }
+.c-text a:hover { color: var(--teal); }
+.contact-form { background: var(--bg); border: 1px solid var(--border); border-top: 4px solid var(--teal); padding: 2.5rem; }
+.contact-form .form-title { font-family: var(--cond); font-size: 1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); margin-bottom: 1.5rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; font-family: var(--cond); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.4rem; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--white); border: 1px solid var(--border); padding: 0.7rem 0.9rem; font-family: var(--body); font-size: 0.88rem; color: var(--text); outline: none; transition: border-color .2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-submit { width: 100%; background: var(--teal); color: var(--white); border: none; padding: 0.9rem; font-family: var(--cond); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; margin-top: 0.5rem; transition: background .2s; }
+.form-submit:hover { background: var(--teal-dark); }
+
+/* ── SPEC BOX ── */
+.spec-box { background: var(--bg); border: 1px solid var(--border); border-top: 4px solid var(--teal); padding: 1.5rem 2rem; }
+.spec-box-title { font-family: var(--cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+.price-display { font-family: var(--cond); font-size: 2.6rem; font-weight: 800; color: var(--teal-dark); line-height: 1; margin-bottom: 0.3rem; }
+.price-unit { font-size: 0.85rem; color: var(--muted); font-family: var(--body); font-weight: 300; }
+
+/* ── FOOTER ── */
+footer { background: var(--slate); padding: 3.5rem 0 1.5rem; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+.footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin: 1rem 0 1.2rem; }
+.footer-col h5 { font-family: var(--cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; cursor: pointer; transition: color .2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-contact-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+.footer-badges { display: flex; gap: 1rem; }
+.footer-badge { font-family: var(--cond); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.15); padding: 0.25rem 0.65rem; }
+
+/* ── FADE ANIMATIONS ── */
+.fade-up { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .product-tiles { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .yield-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .app-grid { grid-template-columns: 1fr 1fr; }
+  .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .market-band .container { grid-template-columns: 1fr; gap: 2.5rem; }
+  .compare-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .container { padding: 0 1.2rem; }
+  .product-tiles { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .nav-menu { display: none; }
+  .app-grid { grid-template-columns: 1fr; }
+  .three-col { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .compliance-strip .container { gap: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <div class="topbar-item">📍 Eastern California · Las Vegas, NV Office</div>
+    </div>
+    <div>
+      <a href="mailto:jay@environmentalminerals.com">✉ jay@environmentalminerals.com</a>
+      <a href="https://environmentalminerals.com" target="_blank">🌐 environmentalminerals.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <div class="nav-logo" onclick="go('home')">
+      <img src="New_Style_Logo_Cropped.png" alt="Environmental Minerals Inc." style="height:52px; width:auto; display:block;">
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#" onclick="go('home');return false;">Home</a></li>
+      <li class="has-drop">
+        <a href="#">Products ▾</a>
+        <div class="drop">
+          <a href="#" onclick="go('concrete');return false;">Concrete &amp; Construction</a>
+          <a href="#" onclick="go('industrial');return false;">Industrial &amp; Specialty</a>
+          <a href="#" onclick="go('agriculture');return false;">Agriculture — Agri-Pozz™</a>
+        </div>
+      </li>
+      <li><a href="#" onclick="go('technical');return false;">Technical Data</a></li>
+      <li><a href="#" onclick="go('about');return false;">About EMI</a></li>
+      <li><a class="nav-cta" href="#" onclick="go('contact');return false;">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ══════════════════ HOME ══════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-backdrop">
+    <div class="hero-bg"></div>
+    <div class="hero-texture"></div>
+    <div class="hero-haze"></div>
+
+    <!-- Terrain SVG silhouette -->
+    <svg class="hero-terrain" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Far mountains -->
+      <path d="M0,300 L0,180 L80,140 L160,160 L260,100 L380,130 L480,90 L580,120 L680,80 L780,110 L880,70 L980,100 L1080,60 L1180,90 L1280,75 L1380,95 L1440,80 L1440,300 Z" fill="rgba(20,45,38,0.55)"/>
+      <!-- Mid hills -->
+      <path d="M0,300 L0,220 L120,190 L240,210 L340,175 L460,195 L540,160 L660,185 L760,155 L860,175 L960,148 L1060,168 L1160,145 L1260,165 L1360,150 L1440,160 L1440,300 Z" fill="rgba(18,40,33,0.7)"/>
+      <!-- Foreground ridge with rock detail -->
+      <path d="M0,300 L0,255 L60,240 L100,248 L150,230 L200,242 L260,225 L320,238 L380,218 L440,232 L500,215 L560,228 L630,210 L700,225 L770,208 L840,222 L900,205 L960,220 L1020,205 L1080,218 L1150,202 L1220,216 L1300,200 L1380,214 L1440,205 L1440,300 Z" fill="rgba(15,32,26,0.85)"/>
+      <!-- Rock faces / cliff detail -->
+      <path d="M380,218 L395,228 L410,215 L425,230 L438,218 Z" fill="rgba(30,60,50,0.6)"/>
+      <path d="M680,155 L700,168 L718,152 L732,164 L745,154 Z" fill="rgba(30,60,50,0.5)"/>
+      <path d="M1080,60 L1100,75 L1115,58 L1130,72 L1145,62 Z" fill="rgba(30,60,50,0.45)"/>
+      <!-- Dust/equipment silhouettes on horizon -->
+      <rect x="420" y="216" width="3" height="14" fill="rgba(180,150,80,0.3)" rx="1"/>
+      <rect x="426" y="210" width="18" height="8" fill="rgba(180,150,80,0.25)" rx="1"/>
+      <rect x="440" y="213" width="3" height="11" fill="rgba(180,150,80,0.3)" rx="1"/>
+    </svg>
+
+    <!-- Centered headline content -->
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Eastern California · ASTM C618 Class N · 4B+ Ton Reserve</div>
+      <h1>Premium <em>Natural Pozzolan</em><br>From America's Largest Deposit</h1>
+      <p class="hero-tagline">Volcanic mineral mined in Eastern California — independently tested, ASTM certified, and serving concrete, industrial, and agricultural markets.</p>
+    </div>
+    </div><!-- /hero-backdrop -->
+
+    <!-- Industry selector panels -->
+    <div class="hero-panels">
+      <div class="hero-panel panel-concrete" onclick="go('concrete')">
+        <div class="panel-icon">🏗️</div>
+        <div class="panel-text">
+          <div class="panel-tag">Concrete &amp; Construction</div>
+          <div class="panel-title">SCM Pozzolan &amp;<br>Industrial Products</div>
+          <div class="panel-desc">ASTM C618 Class N · 30–50% cement replacement · DOT &amp; infrastructure approved</div>
+        </div>
+        <div class="panel-arrow">→</div>
+      </div>
+      <div class="hero-panel panel-agri" onclick="go('agriculture')">
+        <div class="panel-icon">🌱</div>
+        <div class="panel-text">
+          <div class="panel-tag">Agriculture &amp; Soil Science</div>
+          <div class="panel-title">Agri-Pozz™<br>Soil Amendment</div>
+          <div class="panel-desc">Volcanic mineral soil conditioner · +47–67% yield increase · 60% evaporation reduction</div>
+        </div>
+        <div class="panel-arrow">→</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANNOUNCEMENT -->
+  <div class="announce">
+    <span class="announce-text">📋 Full Technical Package with signed lab reports available to qualified buyers</span>
+    <a class="announce-link" onclick="go('contact')">Request Now →</a>
+  </div>
+
+  <!-- COMPLIANCE STRIP -->
+  <div class="compliance-strip">
+    <div class="container">
+      <div class="comp-badge">ASTM C618 Class N</div>
+      <div class="comp-divider"></div>
+      <div class="comp-badge">ASTM C311 Verified</div>
+      <div class="comp-divider"></div>
+      <div class="comp-badge">AASHTO M295</div>
+      <div class="comp-divider"></div>
+      <div class="comp-badge">87% Oxide Content</div>
+      <div class="comp-divider"></div>
+      <div class="comp-badge">100% 28-Day SAI</div>
+      <div class="comp-divider"></div>
+      <div class="comp-badge">4B+ Ton Reserve</div>
+    </div>
+  </div>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-grid fade-up">
+        <div class="stat-item">
+          <div class="stat-val">87%</div>
+          <div class="stat-label">Oxide Content<br>(ASTM requires ≥70%)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">100%</div>
+          <div class="stat-label">28-Day Strength<br>Activity Index</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">4B+</div>
+          <div class="stat-label">Tons Confirmed<br>Reserve</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">47%</div>
+          <div class="stat-label">Max CO₂ Reduction<br>at 50% Replacement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="products-home">
+    <div class="container">
+      <div class="sec-head products-intro">
+        <div class="sec-label">Product Portfolio</div>
+        <h2 class="sec-title">We Can Elevate Your Project</h2>
+        <p class="sec-sub">One volcanic deposit. Three high-value markets. EMI's natural pozzolan delivers proven performance for infrastructure, specialty manufacturing, and agricultural soil health.</p>
+      </div>
+      <div class="product-tiles fade-up">
+        <div class="product-tile teal-dark">
+          <div class="tile-icon">🏗️</div>
+          <div class="tile-tag">Concrete SCM</div>
+          <h3>SCM Pozzolan<br>for Concrete</h3>
+          <p>The premier fly ash replacement for ready-mix, mass concrete, DOT infrastructure, and precast. Superior long-term strength with major CO₂ savings.</p>
+          
+          <ul class="tile-features">
+            <li>30–50% cement replacement</li>
+            <li>28-day SAI 100% (ASTM min: 75%)</li>
+            <li>Up to 47% CO₂ reduction</li>
+            <li>DOT &amp; infrastructure approved</li>
+          </ul>
+          <button class="tile-btn" onclick="go('concrete')">Learn More About Concrete SCM</button>
+        </div>
+        <div class="product-tile teal-mid">
+          <div class="tile-icon">🔧</div>
+          <div class="tile-tag">Industrial &amp; Specialty</div>
+          <h3>PozzSorb™ &amp;<br>Specialty Products</h3>
+          <p>High-silica mineral filler for flooring compounds, crack repair mortars, oil absorbents, grout, masonry, and environmental remediation.</p>
+          
+          <ul class="tile-features">
+            <li>Floor leveling &amp; polished concrete</li>
+            <li>Crack repair &amp; injection mortars</li>
+            <li>EPA-compliant oil absorbent</li>
+            <li>Wastewater treatment media</li>
+          </ul>
+          <button class="tile-btn" onclick="go('industrial')">Learn More About Industrial</button>
+        </div>
+        <div class="product-tile teal-gold">
+          <div class="tile-icon">🌱</div>
+          <div class="tile-tag">Agriculture</div>
+          <h3>Agri-Pozz™<br>Soil Amendment</h3>
+          <p>Volcanic mineral soil conditioner proven to boost crop yields 47–67%, reduce water use 60%, and supercharge soil microbiome health.</p>
+          
+          <ul class="tile-features">
+            <li>+47–67% documented yield increases</li>
+            <li>60% evaporation reduction</li>
+            <li>Triples soil microbiome (UC San Diego)</li>
+            <li>Replaces perlite in greenhouse mixes</li>
+          </ul>
+          <button class="tile-btn" onclick="go('agriculture')">Learn More About Agri-Pozz™</button>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.5rem;">
+        <button class="btn btn-outline-teal" onclick="go('contact')">Request Samples or a Quote for Any Product</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- MARKET CALLOUT -->
+  <div class="market-band">
+    <div class="container">
+      <div class="market-quote-block fade-up">
+        <blockquote>"Fly ash supply is collapsing. IIJA mandates low-carbon concrete nationwide. EMI enters the market at precisely the right inflection point — with committed buyers, no adequate competition, and supply-ready operations."</blockquote>
+        <cite>— EMI Market Analysis, 2025</cite>
+        <div style="margin-top:2rem;">
+          <button class="btn btn-teal" onclick="go('contact')">Request Full Materials (NDA)</button>
+        </div>
+      </div>
+      <div class="market-rows fade-up">
+        <div class="market-row">
+          <div class="market-num">$28B</div>
+          <div class="market-desc">
+            <strong>U.S. SCM Market Size</strong>
+            <span>Growing at 5.6% CAGR as fly ash supply permanently contracts across the Western U.S.</span>
+          </div>
+        </div>
+        <div class="market-row">
+          <div class="market-num">15%</div>
+          <div class="market-desc">
+            <strong>Annual Fly Ash Supply Decline</strong>
+            <span>Western U.S. coal plant closures eliminating the primary SCM source at 15–20% per year.</span>
+          </div>
+        </div>
+        <div class="market-row">
+          <div class="market-num">38%</div>
+          <div class="market-desc">
+            <strong>Concrete CO₂ Reduction</strong>
+            <span>EMI pozzolan reduces concrete carbon intensity — qualifies for LEED credits and ESG mandates.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLY ASH COMPARISON -->
+  <div class="compare-band">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-label">SCM Comparison</div>
+        <h2 class="sec-title">EMI Pozzolan vs. Fly Ash (Class F)</h2>
+        <p class="sec-sub" style="color:rgba(255,255,255,0.6);">Side-by-side performance and supply comparison for ready-mix and infrastructure concrete</p>
+      </div>
+      <div class="compare-grid fade-up">
+        <div class="compare-col-header emi">✓ EMI Natural Pozzolan</div>
+        <div class="compare-col-header fly">⚠ Fly Ash (Class F)</div>
+        <div class="compare-cell emi-cell"><span class="good">30–50% cement replacement</span></div>
+        <div class="compare-cell fly-cell">15–30% cement replacement</div>
+        <div class="compare-cell emi-cell"><span class="good">100% 28-day SAI (ASTM min 75%)</span></div>
+        <div class="compare-cell fly-cell">Moderate strength performance</div>
+        <div class="compare-cell emi-cell"><span class="good">High, stable supply — natural deposit</span></div>
+        <div class="compare-cell fly-cell"><span class="bad">Declining rapidly — coal plant closures</span></div>
+        <div class="compare-cell emi-cell"><span class="good">Up to 47% CO₂ reduction</span></div>
+        <div class="compare-cell fly-cell">Moderate CO₂ reduction</div>
+        <div class="compare-cell emi-cell"><span class="good">Low–moderate cost volatility</span></div>
+        <div class="compare-cell fly-cell"><span class="bad">Increasing price volatility</span></div>
+        <div class="compare-cell emi-cell"><span class="good">No industrial contaminant concerns</span></div>
+        <div class="compare-cell fly-cell"><span class="bad">Industrial waste byproduct variability</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARN MORE BAND -->
+  <div style="background:var(--bg); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3.5rem 0; text-align:center;">
+    <div class="container">
+      <div class="sec-label">Additional Resources</div>
+      <h2 class="sec-title" style="margin-bottom:0.8rem;">Learn More About<br>Natural Pozzolan Science</h2>
+      <p class="sec-sub" style="margin-bottom:2rem;">Explore in-depth research, technical articles, sustainability data, and the science behind natural pozzolan — from ancient Roman engineering to modern concrete innovation.</p>
+      <a href="https://environmentalminerals.com/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.6rem; background:var(--teal); color:var(--white); font-family:var(--cond); font-size:0.82rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:0.9rem 2.2rem; text-decoration:none; transition:background .2s;" onmouseover="this.style.background='var(--teal-dark)'" onmouseout="this.style.background='var(--teal)'">
+        Visit EnvironmentalMinerals.com
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <h2>Is Your Supply Chain Ready for the Fly Ash Shortage?</h2>
+    <p>Contact EMI today for technical documentation, physical samples, and volume pricing.</p>
+    <div class="cta-btns">
+      <button class="btn btn-gold" onclick="go('contact')">Request Samples &amp; Pricing</button>
+      <button class="btn btn-white" onclick="go('technical')">Download Technical Data</button>
+    </div>
+  </div>
+
+</div><!-- /home -->
+
+
+<!-- ══════════════════ CONCRETE PAGE ══════════════════ -->
+<div id="page-concrete" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="inner-breadcrumb">Home <span>/</span> Products <span>/</span> Concrete &amp; Construction</div>
+      <h1>SCM Pozzolan for <em>Concrete &amp; Infrastructure</em></h1>
+    </div>
+  </div>
+
+  <div class="content-sec">
+    <div class="container two-col">
+      <div class="prose">
+        <div class="sec-label" style="justify-content:flex-start;">The Fly Ash Replacement</div>
+        <h2>ASTM C618 Class N Natural Pozzolan</h2>
+        <p>EMI Natural Pozzolan is a finely milled, volcanic-origin supplementary cementitious material (SCM) that replaces fly ash — now in permanent supply decline — as a concrete additive. Independently tested and certified ASTM C618 Class N, it exceeds all acceptance thresholds by significant margins.</p>
+        <h3>Why Concrete Producers Choose EMI</h3>
+        <ul>
+          <li>30–50% cement replacement — double the typical fly ash substitution rate</li>
+          <li>28-day Strength Activity Index of 100% (ASTM minimum: 75%)</li>
+          <li>Up to 47% CO₂ reduction at 50% replacement — LEED credits available</li>
+          <li>Stable, homogeneous volcanic deposit — no performance variability lot-to-lot</li>
+          <li>No coal-plant dependency — available when fly ash isn't</li>
+          <li>Lower permeability, superior sulfate resistance, enhanced long-term durability</li>
+          <li>DOT-approved — bridges, dams, highways, airports, marine structures</li>
+        </ul>
+        <h3>Ready-Mix &amp; Infrastructure Applications</h3>
+        <ul>
+          <li>Ready-mix concrete for commercial and residential construction</li>
+          <li>Mass concrete — large foundations, dams, bridges requiring thermal control</li>
+          <li>Precast and architectural concrete elements</li>
+          <li>Marine and waterfront structures (impervious to salt water)</li>
+          <li>Pavement and highway DOT construction</li>
+          <li>High-performance concrete (HPC) and self-compacting mixes</li>
+        </ul>
+        <h3>Hardened Product Formulations</h3>
+        <p>EMI pozzolan is used as a reactive ingredient in specialty manufacturer product formulations:</p>
+        <ul>
+          <li>Floor leveling and self-leveling underlayment compounds</li>
+          <li>Decorative and polished concrete floors</li>
+          <li>Concrete crack repair mortars and injection grouts</li>
+          <li>Tile adhesives and setting grouts</li>
+          <li>Masonry units, CMU blocks, and architectural pavers</li>
+          <li>Shotcrete and sprayed structural concrete</li>
+        </ul>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <button class="btn btn-teal" onclick="go('contact')">Request Technical Package</button>
+          <button class="btn btn-outline-teal" onclick="go('technical')">Full Data Sheet</button>
+        </div>
+      </div>
+      <div>
+        <div class="spec-box" style="margin-bottom:1.5rem;">
+          <div class="spec-box-title">Pricing &amp; Delivery</div>
+          <p style="font-size:0.88rem; color:var(--mid); margin-bottom:0.8rem; line-height:1.6;">Pricing is customized based on your location, delivery method, and volume. Rail and truck delivery available from Eastern California.</p>
+          <p style="font-size:0.85rem; color:var(--mid); line-height:1.6;">Contact us for a tailored quote including delivery logistics to your plant.</p>
+          <button class="btn btn-gold" style="margin-top:1.2rem; width:100%;" onclick="go('contact')">Request a Quote</button>
+        </div>
+        <div class="spec-box" style="margin-bottom:1.5rem;">
+          <div class="spec-box-title">Strength Development — ASTM C311</div>
+          <table class="data-table">
+            <thead><tr><th>Mix Design</th><th>7-Day SAI</th><th>28-Day SAI</th></tr></thead>
+            <tbody>
+              <tr><td>Typical C311 blend</td><td class="hi">93%</td><td class="hi">100%</td></tr>
+              <tr><td>40% Replacement</td><td class="hi">75%</td><td class="hi">87%</td></tr>
+              <tr><td>50% Replacement</td><td>62%</td><td class="hi">75%</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.72rem; color:var(--muted); margin-top:0.6rem;">ASTM C618 minimum SAI = 75%. All EMI blends pass at 28 days.</p>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-title">CO₂ Reduction by Replacement Level</div>
+          <table class="data-table">
+            <thead><tr><th>Cement Replacement</th><th>CO₂ Reduction</th></tr></thead>
+            <tbody>
+              <tr><td>10%</td><td class="hi">~9.5%</td></tr>
+              <tr><td>20%</td><td class="hi">~19.0%</td></tr>
+              <tr><td>30%</td><td class="hi">~28.5%</td></tr>
+              <tr><td>40%</td><td class="hi">~38.0%</td></tr>
+              <tr><td>50%</td><td class="hi">~47.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ INDUSTRIAL PAGE ══════════════════ -->
+<div id="page-industrial" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="inner-breadcrumb">Home <span>/</span> Products <span>/</span> Industrial &amp; Specialty</div>
+      <h1>PozzSorb™ &amp; <em>Specialty Industrial</em></h1>
+    </div>
+  </div>
+  <div class="content-sec">
+    <div class="container">
+      <div class="sec-head" style="text-align:left; margin-bottom:2rem;">
+        <div class="sec-label" style="justify-content:flex-start;">Industrial Applications</div>
+        <h2 class="sec-title">Beyond Concrete — Specialty Formulations</h2>
+        <p class="sec-sub" style="margin:0; text-align:left;">EMI's high-silica, finely-milled pozzolan is uniquely suited for specialty industrial formulations that require reactive mineral fillers, controlled chemistry, and consistent particle distribution.</p>
+      </div>
+      <div class="app-grid fade-up">
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h4>Flooring Compounds</h4>
+          <p>Self-leveling underlayment, polished concrete floors, and decorative overlays. EMI pozzolan provides smooth flow, controlled set, and excellent long-term surface hardness.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h4>Concrete Crack Repair</h4>
+          <p>High-performance repair mortars and crack injection grouts. Pozzolanic reactivity ensures chemical bonding to existing substrate — resists re-cracking and moisture ingress.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><path d="M7 21H17M12 2v10m-5 5l5-5 5 5"/></svg></div>
+          <h4>PozzSorb™ — Oil &amp; Chemical Absorbent</h4>
+          <p>EPA-compliant industrial absorbent for oil spills, hydrocarbon containment, and hazmat response. High porosity volcanic structure outperforms clay-based alternatives.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div>
+          <h4>Grout &amp; Tile Setting</h4>
+          <p>Pozzolan mineral filler for tile adhesives, grouts, and setting compounds. Enhances workability, reduces shrinkage, and improves bond strength in wet environments.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div>
+          <h4>Wastewater Treatment</h4>
+          <p>Pozzolan binds heavy metals and contaminants in wastewater treatment. Used in sludge stabilization, encapsulation of industrial waste, and pH buffering applications.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h4>Masonry &amp; Block Products</h4>
+          <p>CMU blocks, pavers, retaining wall systems, and architectural masonry. EMI pozzolan improves density, reduces efflorescence, and extends product service life.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><path d="M12 22V12M12 12L6 6M12 12l6-6"/><circle cx="12" cy="4" r="2"/></svg></div>
+          <h4>Environmental Remediation</h4>
+          <p>Toxic waste containment, contaminated soil stabilization, and brownfield remediation. Pozzolan chemically immobilizes heavy metals and reduces leachate mobility.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zM3 9h18M9 9v12"/></svg></div>
+          <h4>Fire Resistance Products</h4>
+          <p>Pozzolan-enhanced fire-resistant boards and panels. High SiO₂ content provides excellent thermal stability and passive fire protection properties.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12s1.5-4 4-4 4 4 4 4-1.5 4-4 4-4-4-4-4z"/></svg></div>
+          <h4>Filtration Media</h4>
+          <p>Natural pozzolan as filtration media in water treatment and industrial fluid purification. Chemically inert with high surface area for efficient adsorption.</p>
+        </div>
+      </div>
+      <div style="margin-top:3rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <button class="btn btn-teal" onclick="go('contact')">Request Industrial Samples</button>
+        <button class="btn btn-outline-teal" onclick="go('technical')">Full Technical Specs</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ AGRICULTURE PAGE ══════════════════ -->
+<div id="page-agriculture" class="page">
+  <div class="inner-hero" style="background: linear-gradient(rgba(14,55,20,0.80), rgba(14,48,18,0.88)), url('agri-page.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="inner-breadcrumb">Home <span>/</span> Products <span>/</span> Agriculture</div>
+      <h1>Agri-Pozz™ — <em>Volcanic Soil Science</em></h1>
+    </div>
+  </div>
+
+  <div class="yield-bar">
+    <div class="container">
+      <div class="yield-grid fade-up">
+        <div class="yield-item"><div class="yield-val">+67%</div><div class="yield-lbl">Crop Yield Increase<br>(Desert Field Trials)</div></div>
+        <div class="yield-item"><div class="yield-val">60%</div><div class="yield-lbl">Evaporation<br>Reduction</div></div>
+        <div class="yield-item"><div class="yield-val">3×</div><div class="yield-lbl">Plant Growth<br>(UC San Diego)</div></div>
+        <div class="yield-item"><div class="yield-val">30%</div><div class="yield-lbl">Fertilizer Input<br>Reduction</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-sec">
+    <div class="container two-col">
+      <div class="prose">
+        <div class="sec-label" style="justify-content:flex-start;">The Science</div>
+        <h2>How Volcanic Ash Supercharges Soil</h2>
+        <p>Agri-Pozz is finely milled volcanic pumicite — a natural soil conditioner containing over 70% amorphous silica, essential micronutrients, and a porous structure that transforms how soil holds water, air, and nutrients. It is not a chemical fertilizer — it is a mineral upgrade to the soil itself.</p>
+        <h3>Catalytic Mechanism</h3>
+        <p>Research from Kamchatka demonstrates volcanic ash functions as a multi-nutrient mineral fertilizer whose catalytic mechanism replenishes trace metals (Mn, Zn, Mo, Cu, Fe) necessary for soil bacterial enzymes to efficiently cycle nitrogen, carbon, phosphorus, and sulfur. Small applications fertilize large surfaces.</p>
+        <h3>Breakthrough Microbiome Research</h3>
+        <p>UC San Diego researchers found adding just 3% volcanic ash to soil tripled plant growth by completely restructuring the soil microbiome — stimulating beneficial bacteria and suppressing harmful organisms.</p>
+        <h3>Desert Agriculture</h3>
+        <p>Field trials with pozzolan mulch in desert environments increased crop yields 56–67% while dramatically cutting water consumption. Agri-Pozz acts as a sponge — holding precious irrigation water in the root zone and reducing evaporation by up to 60%.</p>
+        <h3>Application Rates by Market</h3>
+        <ul>
+          <li><strong>Row crops (corn, wheat, soy):</strong> 400–2,000 lbs/acre</li>
+          <li><strong>Orchards &amp; vineyards:</strong> 1,000–3,000 lbs/acre</li>
+          <li><strong>Greenhouse growing media:</strong> 10–20% by volume</li>
+          <li><strong>Golf course topdressing:</strong> 5–10% rootzone blend</li>
+          <li><strong>Desert/arid farming:</strong> 2.5–7.5 tons/hectare</li>
+        </ul>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <button class="btn btn-teal" onclick="go('contact')">Request Agri-Pozz™ Sample</button>
+        </div>
+      </div>
+      <div>
+        <div class="spec-box" style="margin-bottom:1.5rem;">
+          <div class="spec-box-title">Agri-Pozz™ Mineral Profile</div>
+          <table class="data-table">
+            <thead><tr><th>Component</th><th>Content</th><th>Agricultural Role</th></tr></thead>
+            <tbody>
+              <tr><td>Silica (SiO₂)</td><td class="hi">70%</td><td style="font-size:0.78rem;color:var(--mid);">Cell strength, disease resistance</td></tr>
+              <tr><td>Alumina (Al₂O₃)</td><td class="hi">15%</td><td style="font-size:0.78rem;color:var(--mid);">Soil structure, nutrient retention</td></tr>
+              <tr><td>Iron Oxide (Fe₂O₃)</td><td class="hi">2.4%</td><td style="font-size:0.78rem;color:var(--mid);">Plant metabolism cofactor</td></tr>
+              <tr><td>Calcium (CaO)</td><td class="hi">3.4%</td><td style="font-size:0.78rem;color:var(--mid);">pH regulation, cell membranes</td></tr>
+              <tr><td>Magnesium (MgO)</td><td class="hi">1.4%</td><td style="font-size:0.78rem;color:var(--mid);">Chlorophyll synthesis</td></tr>
+              <tr><td>Trace metals (Mn, Zn, Mo, Cu)</td><td class="hi">Present</td><td style="font-size:0.78rem;color:var(--mid);">Enzyme catalysis in soil bacteria</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="spec-box">
+          <div class="spec-box-title">Pricing &amp; Availability</div>
+          <p style="font-size:0.88rem;color:var(--mid);margin-bottom:0.8rem;line-height:1.6;">Pricing is tailored to volume, application, and delivery logistics. Available Spring 2026 from Eastern California — bulk transport delivery, 2 hours north of Los Angeles.</p>
+          <p style="font-size:0.85rem;color:var(--mid);line-height:1.6;">Early order and volume pricing available for fertilizer blenders and distributors.</p>
+          <button class="btn btn-gold" style="margin-top:1.2rem;width:100%;" onclick="go('contact')">Request Sample &amp; Pricing</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-sec alt">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-label">Market Applications</div>
+        <h2 class="sec-title">Where Agri-Pozz™ Performs Best</h2>
+      </div>
+      <div class="app-grid fade-up">
+        <div class="app-card"><h4>Row Crop Agriculture</h4><p>Blend into base fertilizers at 400–2,000 lbs/acre. Reduces nitrogen loss, prevents nutrient runoff, and improves water-holding capacity — fertilizer investment works harder and lasts longer.</p></div>
+        <div class="app-card"><h4>Specialty &amp; Permanent Crops</h4><p>Orchards and vineyards benefit from improved rooting volume, moisture buffering, and slow-release silicon that strengthens plant cell walls. Better roots, higher-quality yields.</p></div>
+        <div class="app-card"><h4>Greenhouse &amp; Nursery</h4><p>Cost-effective perlite alternative for growing media. Superior aeration, moisture management, and long-term mineral nutrition — perfect for organic and regenerative systems.</p></div>
+        <div class="app-card"><h4>Golf &amp; Professional Turf</h4><p>Integrated into rootzone mixes, plant-available silicon reduces disease 20–40%, improves drought tolerance, and enhances wear recovery — cutting irrigation requirements significantly.</p></div>
+        <div class="app-card"><h4>Fertilizer Manufacturing</h4><p>Premium ingredient for next-generation product lines. Formulate volcanic ash-enhanced blends targeting regenerative agriculture and drought-prone markets seeking natural solutions.</p></div>
+        <div class="app-card"><h4>Desert &amp; Arid Farming</h4><p>Transforms marginal arid land into productive farmland. 60% evaporation reduction and 56–67% yield increases validated. Field-proven in California's most challenging growing conditions.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ TECHNICAL PAGE ══════════════════ -->
+<div id="page-technical" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="inner-breadcrumb">Home <span>/</span> Technical Data</div>
+      <h1>Technical Data Sheet — <em>ASTM C618 Class N</em></h1>
+    </div>
+  </div>
+  <div class="content-sec">
+    <div class="container">
+      <div class="sec-head" style="text-align:left;">
+        <div class="sec-label" style="justify-content:flex-start;">Independent Laboratory Results</div>
+        <h2 class="sec-title">Chemistry, Physical Properties &amp; Strength</h2>
+      </div>
+      <div class="two-col fade-up" style="margin-top:2rem;">
+        <div>
+          <p style="font-family:var(--cond);font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;">Chemical Composition</p>
+          <table class="data-table" style="margin-bottom:1.5rem;">
+            <thead><tr><th>Oxide</th><th>EMI Result (%)</th><th>ASTM C618 Limit</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>SiO₂</td><td class="hi">68.41</td><td>—</td><td>—</td></tr>
+              <tr><td>Al₂O₃</td><td class="hi">15.58</td><td>—</td><td>—</td></tr>
+              <tr><td>Fe₂O₃</td><td class="hi">3.05</td><td>—</td><td>—</td></tr>
+              <tr><td><strong>Σ Oxides</strong></td><td class="good"><strong>87.04%</strong></td><td>≥ 70.0%</td><td><span class="pass-badge">+17% over min</span></td></tr>
+              <tr><td>CaO</td><td>3.36</td><td>—</td><td>—</td></tr>
+              <tr><td>MgO</td><td>1.35</td><td>—</td><td>—</td></tr>
+              <tr><td>SO₃</td><td class="good">0.01%</td><td>≤ 4.0%</td><td><span class="pass-badge">Pass</span></td></tr>
+              <tr><td>Moisture</td><td class="good">0.25%</td><td>≤ 3.0%</td><td><span class="pass-badge">Pass</span></td></tr>
+              <tr><td>Loss on Ignition</td><td class="good">4.31%</td><td>≤ 10.0%</td><td><span class="pass-badge">Pass</span></td></tr>
+            </tbody>
+          </table>
+          <p style="font-family:var(--cond);font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;">Physical Properties</p>
+          <table class="data-table">
+            <thead><tr><th>Property</th><th>Result</th><th>ASTM Limit</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>% Retained on No. 325 Sieve</td><td class="good">1.0%</td><td>≤ 34%</td><td><span class="pass-badge">Pass</span></td></tr>
+              <tr><td>Blaine Fineness</td><td class="hi">7,060 cm²/g</td><td>Informational</td><td>—</td></tr>
+              <tr><td>Density</td><td>2.51</td><td>—</td><td>—</td></tr>
+              <tr><td>Water Requirement</td><td class="good">99%</td><td>≤ 115%</td><td><span class="pass-badge">Pass</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <p style="font-family:var(--cond);font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;">Strength Activity Index — ASTM C311</p>
+          <table class="data-table" style="margin-bottom:1.5rem;">
+            <thead><tr><th>Cement Replacement</th><th>7-Day SAI</th><th>28-Day SAI</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>Typical C311 blend</td><td class="hi">93%</td><td class="hi">100%</td><td><span class="pass-badge">Exceeds</span></td></tr>
+              <tr><td>40% Replacement</td><td class="hi">75%</td><td class="hi">87%</td><td><span class="pass-badge">Compliant</span></td></tr>
+              <tr><td>50% Replacement</td><td>62%</td><td class="hi">75%</td><td><span class="pass-badge">Compliant</span></td></tr>
+            </tbody>
+          </table>
+          <p style="font-family:var(--cond);font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;">EMI vs. Alternative SCMs</p>
+          <table class="data-table" style="margin-bottom:1.5rem;">
+            <thead><tr><th>Attribute</th><th>EMI Pozzolan</th><th>Fly Ash (F)</th><th>Slag (GGBFS)</th></tr></thead>
+            <tbody>
+              <tr><td>Cement Replacement</td><td class="good">30–50%</td><td>15–30%</td><td>30–50%</td></tr>
+              <tr><td>Long-Term Strength</td><td class="good">High, stable</td><td>Moderate</td><td>High</td></tr>
+              <tr><td>Supply Reliability</td><td class="good">High</td><td class="warn">Declining</td><td>Region-limited</td></tr>
+              <tr><td>CO₂ Reduction</td><td class="good">High</td><td>Moderate</td><td>High</td></tr>
+              <tr><td>Cost Volatility</td><td class="good">Low–Moderate</td><td class="warn">Increasing</td><td>Moderate</td></tr>
+            </tbody>
+          </table>
+          <div class="spec-box">
+            <div class="spec-box-title">Quality Assurance Program</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+              <li style="font-size:0.85rem;color:var(--mid);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">✓</span>Controlled source — homogeneous volcanic deposit</li>
+              <li style="font-size:0.85rem;color:var(--mid);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">✓</span>Lot-based sampling and testing per ASTM C311</li>
+              <li style="font-size:0.85rem;color:var(--mid);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">✓</span>Certificate of Analysis (COA) issued per shipment</li>
+              <li style="font-size:0.85rem;color:var(--mid);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">✓</span>Ongoing ASTM C311 verification program</li>
+              <li style="font-size:0.85rem;color:var(--mid);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">✓</span>Independently tested by certified third-party laboratories</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;padding:2.5rem;background:var(--teal-pale);border:1px solid var(--border);">
+        <h3 style="font-family:var(--cond);font-size:1.4rem;font-weight:800;color:var(--slate);text-transform:uppercase;margin-bottom:0.6rem;">Request the Full Technical Package</h3>
+        <p style="font-size:0.88rem;color:var(--mid);margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;">Signed ASTM C618 lab reports, ASTM C311 test data, sampling SOPs, and Certificates of Analysis available to qualified buyers and engineers.</p>
+        <button class="btn btn-teal" onclick="go('contact')">Request Technical Documentation</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ ABOUT PAGE ══════════════════ -->
+<div id="page-about" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="inner-breadcrumb">Home <span>/</span> About EMI</div>
+      <h1>Environmental Minerals Inc. — <em>Our Mission &amp; Story</em></h1>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <div class="content-sec">
+    <div class="container two-col">
+      <div class="prose">
+        <div class="sec-label" style="justify-content:flex-start;">About EMI</div>
+        <h2>Supplying the Materials That Build the World</h2>
+        <p>Environmental Minerals Inc. is developing a scalable natural pozzolan mining and processing operation on a 640-acre site in Eastern California — the largest known natural pozzolan deposit in North America.</p>
+        <p>Our mission is to provide a reliable, domestic source of high-quality natural pozzolan that addresses the permanent structural decline of fly ash supply across U.S. construction markets. With 4+ billion tons of confirmed reserves, EMI is positioned to serve Western U.S. concrete producers, specialty manufacturers, and agricultural markets for generations.</p>
+        <h3>What We Mine</h3>
+        <p>Our deposit is a premium volcanic pumicite — a naturally occurring amorphous siliceous material formed by ancient volcanic activity. The deposit is homogeneous, with consistent chemistry throughout, enabling predictable product performance lot after lot.</p>
+        <h3>Our Markets</h3>
+        <p>EMI serves three distinct markets from a single premium deposit: supplementary cementitious materials (SCM) for concrete and infrastructure, specialty industrial formulations, and agricultural soil amendment. Each market is served by the same ASTM-certified natural pozzolan, processed to the specifications required by each application.</p>
+      </div>
+      <div>
+        <div class="spec-box">
+          <div class="spec-box-title">Company Snapshot</div>
+          <table class="data-table">
+            <tbody>
+              <tr><td style="color:var(--muted);font-size:0.8rem;">Location</td><td>Eastern California (mine site)</td></tr>
+              <tr><td style="color:var(--muted);font-size:0.8rem;">Site Size</td><td>640 acres (6 sq. miles)</td></tr>
+              <tr><td style="color:var(--muted);font-size:0.8rem;">Confirmed Reserves</td><td class="hi">4+ Billion Tons</td></tr>
+              <tr><td style="color:var(--muted);font-size:0.8rem;">Mine Life</td><td>20+ Years at Full Production</td></tr>
+              <tr><td style="color:var(--muted);font-size:0.8rem;">Phase 1 Capacity</td><td>300K–1M TPA</td></tr>
+              <tr><td style="color:var(--muted);font-size:0.8rem;">Markets Served</td><td>CA, AZ, NV, Southwest U.S.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP TEAM -->
+  <div class="content-sec alt">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-label">Management</div>
+        <h2 class="sec-title">Leadership Team</h2>
+        <p class="sec-sub">Experienced executives across mining operations, infrastructure, finance, regulatory affairs, and corporate development.</p>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:2rem; margin-top:2.5rem;">
+
+        <!-- Michael Walker -->
+        <div style="background:var(--white); border:1px solid var(--border); border-top:4px solid var(--teal); padding:2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem;">
+            <div style="width:52px;height:52px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--border);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <p style="font-family:var(--cond);font-size:1.05rem;font-weight:800;color:var(--slate);text-transform:uppercase;letter-spacing:0.04em;">Michael Walker</p>
+              <p style="font-family:var(--cond);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);">Chief Executive Officer</p>
+              <p style="font-size:0.78rem;color:var(--muted);margin-top:0.2rem;">mwalker@environmentalminerals.com</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;">Mr. Walker has over 25 years of experience in hospitality operations, real estate development, structured finance, and capital deployment. He holds a Master's Degree from the University of British Columbia, specializing in asset intensive businesses and capital structuring. His expertise emphasizes execution delivery, cost control, and underwriting based evaluation of development and operating assets. Michael focuses on disciplined contractual sequencing, governance oversight, and execution accountability to ensure that corporate actions and financing processes meet institutional standards and board level risk management expectations.</p>
+        </div>
+
+        <!-- Eliseo Garza -->
+        <div style="background:var(--white); border:1px solid var(--border); border-top:4px solid var(--teal); padding:2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem;">
+            <div style="width:52px;height:52px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--border);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <p style="font-family:var(--cond);font-size:1.05rem;font-weight:800;color:var(--slate);text-transform:uppercase;letter-spacing:0.04em;">Eliseo Garza</p>
+              <p style="font-family:var(--cond);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);">VP Infrastructure &amp; Operations</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;">Eliseo Garza is an accomplished executive with more than 30 years of leadership experience spanning municipal government, large-scale operations, environmental services, and infrastructure development. He has successfully designed and implemented new programs under demanding timelines while navigating complex policy, political, and stakeholder environments. Mr. Garza brings a unique blend of operational command, regulatory sophistication, economic development strategy, and executive leadership to emerging and growth-focused enterprises, particularly in industries requiring complex permitting, capital deployment, and disciplined operational management.</p>
+        </div>
+
+        <!-- Jeremy Bergeron -->
+        <div style="background:var(--white); border:1px solid var(--border); border-top:4px solid var(--teal); padding:2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem;">
+            <div style="width:52px;height:52px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--border);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <p style="font-family:var(--cond);font-size:1.05rem;font-weight:800;color:var(--slate);text-transform:uppercase;letter-spacing:0.04em;">Jeremy Bergeron</p>
+              <p style="font-family:var(--cond);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);">Chief Sustainability, Regulatory &amp; Political Affairs Officer</p>
+              <p style="font-size:0.78rem;color:var(--muted);margin-top:0.2rem;">jay.bergeron@environmentalminerals.com</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;">Bringing nearly two decades of experience in environmental and regulatory consulting across federal, state, local, nonprofit, and private sector clients. He has led the design, construction, remediation, and long-term compliance of stormwater and green infrastructure systems for major industrial and infrastructure assets. Jay holds a degree from the University of Queensland, where he focused on green infrastructure and water resource management. His current work spans environmental permitting, ESG-aligned monitoring and reporting, and lifecycle stewardship of environmental obligations for large facilities — providing EMI with a single point of accountability for sustainability, regulatory engagement, and political affairs strategy.</p>
+        </div>
+
+        <!-- Dalj Brar -->
+        <div style="background:var(--white); border:1px solid var(--border); border-top:4px solid var(--teal); padding:2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem;">
+            <div style="width:52px;height:52px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--border);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <p style="font-family:var(--cond);font-size:1.05rem;font-weight:800;color:var(--slate);text-transform:uppercase;letter-spacing:0.04em;">Dalj Brar</p>
+              <p style="font-family:var(--cond);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);">VP Corporate Development</p>
+              <p style="font-size:0.78rem;color:var(--muted);margin-top:0.2rem;">dalj.brar@environmentalminerals.com</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;">Mr. Brar leads strategic partnerships, investor engagement, and execution of corporate initiatives. He supports transaction logistics, SPV structuring, and operational sequencing helping position the company for large-scale commercialization. He holds a Bachelor of Science from the University of British Columbia, providing a strong analytical foundation for complex, multiparty commercial environments. His background in operations leadership in the film and media industry contributes to his disciplined execution mindset, deadline accountability, and ability to manage multistakeholder projects and investor relationships.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="inner-breadcrumb">Home <span>/</span> Contact</div>
+      <h1>Contact EMI — <em>Request Samples or a Quote</em></h1>
+    </div>
+  </div>
+  <div class="content-sec">
+    <div class="container">
+      <div class="contact-grid fade-up">
+        <div class="contact-info-block">
+          <h3>Let's Build Something Lasting</h3>
+          <p>Whether you're a concrete producer seeking a reliable fly ash replacement, a specialty manufacturer looking for a high-performance mineral filler, or an agronomist exploring volcanic soil amendments — we'd welcome the conversation.</p>
+          <div class="c-detail">
+            <div class="c-item">
+              <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="c-text"><strong>General Inquiries</strong><a href="mailto:question@environmentalminerals.com">question@environmentalminerals.com</a></div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="c-text"><strong>Regulatory &amp; Sustainability</strong><a href="mailto:jay.bergeron@environmentalminerals.com">jay.bergeron@environmentalminerals.com</a></div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="c-text"><strong>Corporate Development</strong><a href="mailto:dalj.brar@environmentalminerals.com">dalj.brar@environmentalminerals.com</a></div>
+            </div>
+
+          </div>
+          <div style="background:var(--teal-pale);border:1px solid var(--border);border-left:4px solid var(--teal);padding:1.2rem 1.5rem;">
+            <p style="font-family:var(--cond);font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Full Materials Available Under NDA</p>
+            <p style="font-size:0.82rem;color:var(--mid);line-height:1.6;">Investor deck, geological summary, and Phase 1-3 development plan available to qualified parties. Site coordinates disclosed to qualified buyers only.</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div class="form-title">Send Us a Message</div>
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+          </div>
+          <div class="form-group"><label>Company</label><input type="text" placeholder="Your organization"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@company.com"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="+1 (555) 000-0000"></div>
+          <div class="form-group">
+            <label>I'm Interested In</label>
+            <select>
+              <option value="">Select a product or inquiry...</option>
+              <option>SCM Pozzolan - Concrete and Infrastructure</option>
+              <option>PozzSorb - Industrial Applications</option>
+              <option>Agri-Pozz - Agricultural Soil Amendment</option>
+              <option>Technical Data Sheet / Lab Reports</option>
+              <option>Physical Sample Request</option>
+              <option>Bulk Pricing / Volume Quote</option>
+              <option>Investment / Partnership Inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your project, volumes needed, or questions..."></textarea></div>
+          <button class="form-submit" onclick="handleForm()">Send Message</button>
+          <p id="form-msg" style="display:none;text-align:center;color:#1b7a4a;font-size:0.85rem;margin-top:1rem;font-family:var(--cond);font-weight:700;letter-spacing:0.08em;">Message sent! We will respond within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="cursor:pointer;margin-bottom:1rem;" onclick="go('home')">
+          <img src="New_Style_Logo_Cropped.png" alt="Environmental Minerals Inc." style="height:70px; width:auto; display:block; filter: brightness(0) invert(1) opacity(0.85);">
+        </div>
+        <p>Supplying the world with essential earth minerals that reduce the global carbon footprint - ASTM C618 Class N natural pozzolan from the largest known deposit in North America.</p>
+        <div class="footer-contact-row">✉ <a href="mailto:question@environmentalminerals.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">question@environmentalminerals.com</a></div>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <ul class="footer-links">
+          <li><a onclick="go('concrete')">SCM Pozzolan - Concrete</a></li>
+          <li><a onclick="go('industrial')">PozzSorb - Industrial</a></li>
+          <li><a onclick="go('agriculture')">Agri-Pozz - Agriculture</a></li>
+          <li><a onclick="go('technical')">Technical Data Sheet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul class="footer-links">
+          <li><a onclick="go('about')">About EMI</a></li>
+          <li><a onclick="go('about')">Leadership and Advisors</a></li>
+          <li><a onclick="go('contact')">Contact Us</a></li>
+          <li><a href="https://environmentalminerals.com" target="_blank">Main Website</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Compliance</h5>
+        <ul class="footer-links">
+          <li><a>ASTM C618 Class N</a></li>
+          <li><a>ASTM C311 Testing</a></li>
+          <li><a>AASHTO M295</a></li>
+          <li><a onclick="go('contact')">Request Lab Reports</a></li>
+        </ul>
+        <div style="margin-top:1.2rem;display:flex;flex-direction:column;gap:0.4rem;">
+          <div class="footer-badge">ASTM C618 Class N</div>
+          <div class="footer-badge">ASTM C311 Verified</div>
+          <div class="footer-badge">AASHTO M295</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">2025 Environmental Minerals Inc. All rights reserved.</p>
+      <div style="display:flex;gap:1.5rem;">
+        <a style="font-size:0.72rem;color:rgba(255,255,255,0.3);text-decoration:none;cursor:pointer;">Privacy Policy</a>
+        <a style="font-size:0.72rem;color:rgba(255,255,255,0.3);text-decoration:none;cursor:pointer;">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function go(id) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page-" + id).classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  setTimeout(checkFade, 120);
+}
+window.addEventListener("scroll", checkFade);
+function checkFade() {
+  document.querySelectorAll(".fade-up:not(.visible)").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add("visible");
+  });
+}
+function handleForm() {
+  const m = document.getElementById("form-msg");
+  m.style.display = "block";
+  setTimeout(() => m.style.display = "none", 5000);
+}
+setTimeout(checkFade, 200);
+</script>
+</body>
+</html>
